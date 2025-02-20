@@ -24,7 +24,7 @@ document.getElementById("submitReview").addEventListener("click", function () {
                 <p>Rating: ${"⭐".repeat(selectedRating)}</p>
             </div>
         `;
-        reviewsList.innerHTML += reviewHTML;
+        reviewsList.innerHTML = reviewHTML + reviewsList.innerHTML;
         document.getElementById("username").value = "";
         document.getElementById("reviewText").value = "";
         selectedRating = 0;
