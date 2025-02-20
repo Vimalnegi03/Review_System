@@ -1,4 +1,3 @@
-
 body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(to right, #000428, #004e92);
@@ -6,10 +5,16 @@ body {
     text-align: center;
     margin: 0;
     padding: 20px;
-}
-
-.review-container {
-    width: 50%;
+  }
+  h2{
+    text-align: center;
+  }
+  /* Main Container */
+  .review-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
     margin: auto;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -17,13 +22,27 @@ body {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
-}
-
-.review-container:hover {
+  }
+  
+  .review-container:hover {
     transform: scale(1.02);
-}
-
-input, textarea {
+  }
+  
+  /* Review Form Section */
+  .review-form {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* Reviews Panel Section */
+  .reviews-panel {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+  }
+  
+  /* Inputs and Textarea */
+  input, textarea {
     width: 98%;
     padding: 12px;
     margin: 10px 0;
@@ -34,37 +53,38 @@ input, textarea {
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease-in-out;
-}
-
-input::placeholder, textarea::placeholder {
+  }
+  
+  input::placeholder, textarea::placeholder {
     color: rgba(255, 255, 255, 0.6);
-}
-
-input:focus, textarea:focus {
+  }
+  
+  input:focus, textarea:focus {
     background: rgba(255, 255, 255, 0.3);
-}
-
-
-.star-rating {
+  }
+  
+  /* Star Rating */
+  .star-rating {
     display: flex;
     justify-content: center;
     font-size: 35px;
     cursor: pointer;
     margin-bottom: 10px;
     transition: all 0.3s;
-}
-
-.star {
+  }
+  
+  .star {
     color: rgba(255, 255, 255, 0.5);
     transition: color 0.3s, transform 0.2s;
-}
-
-.star:hover, .star.selected {
+  }
+  
+  .star:hover, .star.selected {
     color: gold;
     transform: scale(1.2);
-}
-
-button {
+  }
+  
+  /* Button */
+  button {
     background: linear-gradient(135deg, #ff416c, #ff4b2b);
     color: white;
     padding: 12px 25px;
@@ -74,19 +94,20 @@ button {
     font-size: 18px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(255, 75, 43, 0.5);
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background: linear-gradient(135deg, #ff4b2b, #ff416c);
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(255, 75, 43, 0.7);
-}
-
-#reviewsList {
+  }
+  
+  /* Reviews List Styling */
+  #reviewsList {
     margin-top: 20px;
-}
-
-.review {
+  }
+  
+  .review {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     margin: 10px 0;
@@ -95,17 +116,17 @@ button:hover {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.5s forwards;
-}
-
-.review:hover {
+  }
+  
+  .review:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.02);
-}
-
-
-@keyframes fadeIn {
+  }
+  
+  @keyframes fadeIn {
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
+  }
+  
